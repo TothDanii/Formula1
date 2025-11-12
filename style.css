@@ -10,9 +10,11 @@ body {
     background-position: bottom;
     font-family:"Inter", sans-serif;
     line-height: 1.6;
-    color: #444;
+    color: #333;
     /* background-color: #fff; */
 }
+
+
 
 header{
     background-image: url(Képek/fejléc.png);
@@ -21,15 +23,15 @@ header{
     background-color: lightgray;
     border-bottom: 4px solid red;
     padding: 20px;
-    height: 250px;
+    height: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
 
-header > img {
-    width: 200px;
-    height: 100px;
+header img {
+    width: 180px;
+    height: 54px;
 }
 
 .aktív {
@@ -37,15 +39,15 @@ header > img {
     color: white;
 }
 
-header > nav{
+header nav{
 
     display: flex;
     flex-flow: column ;
     justify-content: space-around;
-    height: 200px;
+    height: 180px;
 }
 
-header > nav > a {
+header a {
     float: right;
     border: 2px solid black;
     border-radius: 3px;
@@ -56,11 +58,11 @@ header > nav > a {
     padding: 4px;
 }
 
-header > nav > a:hover{
+header a:hover{
     background-color: red;
 }
 
-main{
+.tartalom{
     text-align: justify;
     padding: 5px 20px;
     background-color: rgba(255, 255, 255, 0.7);
@@ -69,7 +71,7 @@ main{
     border-radius: 15px;
 }
 
-.tartalom > section{
+.tartalom  section{
     background-color: rgba(111, 111, 111, 0.7); /* rgba(248, 189, 182, 0.9); */
     padding: 15px;
     border: #666 solid 3px;
@@ -77,20 +79,37 @@ main{
     margin: 20px 0;
 }
 
-section > h2 {
+section  h2 {
     line-height: 1.4;   
     margin-bottom: 17px;
     border-bottom: 3px solid red ;
+    font-weight: bold;
+    font-size: 18px;
 }
 
-.tartalom > section > p {
+.tartalom  p {
     text-indent: 2rem;
     margin-bottom: 10px;
+    color: black;
+    font-size: 12px;
 }
 
-section > img{
+section img{
     width: 100%;
     border-radius: 15px;
-    border: 2px solid black;
+    border: 2px solid ;
     max-width: 500px;
 }
+
+.notyet{
+    position: relative;
+}
+
+.jövőre{
+    position: absolute;
+    background-color: red;
+    color: white;
+    padding: 0;
+    right: 2rem;
+    top: 10px;
+} 
