@@ -1,0 +1,181 @@
+html {box-sizing: border-box;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Georgia, serif;
+    line-height: 1.6;
+    color: #444;
+    background-color: #fff;
+}
+
+header{
+    border-bottom: 3px #f4c430 solid;
+    padding: 15px 0px;
+    display: flow-root;
+}
+
+.header-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    float: left;
+    font-size: 27px;
+    font-weight: bold;
+    color: #f4c430;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.logo > span {
+    color: #777;
+    font-weight: normal;
+}
+
+.header-container > nav {
+    float: left;
+    padding: 8px 0px;
+    line-height: 28px;
+}
+
+.header-container > nav > a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 10px;
+    color: #777;
+}
+
+.misc{
+    float: right;
+    padding: 8px 20px;
+}
+
+.misc > a{
+    text-decoration: none;
+    color: #777;
+}
+
+.subscribe{
+    color: #777;
+    padding: 10px;
+    border: #777 2px  solid;
+}
+
+.subscribe:hover {
+    background-color: #f4c430;
+}
+
+main{
+    max-width: 1200px;
+    margin: 40px auto 0px auto;
+    display: flow-root;
+}
+
+article{
+    float: left;
+    width: calc(100% - 340px);
+}
+
+aside {
+    float: right;
+    width: 300px;
+}
+
+main > article > h1{
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+main > article > h2{
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: #f4c430 3px solid;
+    color: #666;
+}
+
+.meta {
+    border-bottom: #ddd 1px solid;
+    display: flow-root;
+    margin: 15px 0;
+    padding: 15px 0;
+    color: #666;
+    line-height: 35px;
+}
+
+.meta > span {
+    margin-right: 25px;
+}
+
+.share{
+    float: right;
+}
+
+.share a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border: 1px #666 solid;
+    line-height: 35px;
+    text-decoration: none;
+    color: #666;
+}
+
+section > p {
+    margin: 20px 0px;
+    text-align: justify;
+    font-size: 18px;
+}
+section > h3 {
+    color: #d32f2f;
+    font-size: 24px;
+}
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+figure {
+    float: left;
+    width: 300px;
+    text-align: justify;
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+.author{
+    background-color: #fffaeb;
+    padding: 20px;
+    text-align: center;
+}
+
+.author h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.author img {
+    border-radius: 50%;
+    width: 100px;
+    height: auto;
+    margin: 20px 0;
+}
+
+.author p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.author a{
+    display: block;
+    text-decoration: none;
+    color: #666;
+}
