@@ -17,7 +17,7 @@ h2 {
 }
 
 body {
-    background-image: url(../Képek/Háttér.jpg);
+    background-image: url(../kepek/hatter.jpg);
     background-size: cover; 
     background-repeat: no-repeat;   
     /* background-size: auto; */
@@ -31,7 +31,7 @@ body {
 }
 
 header{
-    background-image: url(../Képek/fejléc.png);
+    background-image: url(../kepek/fejlec.png);
     background-size: cover;
     background-position: right ;
     border-bottom: 4px solid red;
