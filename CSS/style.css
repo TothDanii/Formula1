@@ -46,7 +46,7 @@ header{
 header img {
     margin: 0 auto;
     width: 180px;
-    height: 54px;
+    height: auto;
 }
 
 #aktív {
@@ -79,6 +79,10 @@ header a:hover{
     background-color: red;
 }
 
+#aktív:hover{
+    background-color: rgb(200, 0, 0);
+}
+
 .tartalom{
     text-align: justify;
     padding: 15px 20px;
@@ -103,24 +107,26 @@ header a:hover{
     font-weight: bold;
 }
 
-.tartalom section {
+.tartalom p, section{
 
     margin-bottom: 10px;
     color: black;
 }
 
 #cikkek img{
+    display: block;
     width: 100%;
+    height: auto;
     border-radius: 15px;
     border: 2px solid ;
-    max-width: 500px;
+    max-width: 700px;
 }
 
 #cikkek article{
     margin: 20px 0;
 }
 
-#cikkek section {
+#cikkek p {
     text-indent: 1.5rem;
 }
 
@@ -160,18 +166,12 @@ header a:hover{
     top: 10px;
 }  */
 
+
+
 @media (min-width: 45em){
-    * {
-        font-size: 17px;
-    }
-
-    h1 {
-        font-size: 40px;
-    }   
-
-    h2 {
-        font-size: 24px;
-    }
+    body {font-size: 17px;}
+    h1 {font-size: 40px;}   
+    h2 {font-size: 24px;}
 
 
     header{
@@ -187,7 +187,8 @@ header a:hover{
         flex-flow: row wrap;
         justify-content: space-around;
         align-items: flex-end;
-        width: 620px;
+        max-width: 620px;
+        width: 100%
     }
 
     .navigation a {
@@ -202,18 +203,9 @@ header a:hover{
         align-items: flex-start;
     }
 
-    
-    #cikkek{
-        flex: 3;
-        margin-right: 0px;
-    }
-
     aside {
         position:sticky;
-        /* flex: 2; */
         top: 150px;
-        /* width: 7000px; */
-        /* minwidth: 300px; */
     }
 
     #csapatok{
@@ -228,7 +220,60 @@ header a:hover{
 }
 
 @media (min-width: 75em){
+
+    *{font-size: 18px;}
+    h1{font-size: 30px;}
+    h2{font-size: 28px;}
+    
+    header{
+        height: 140px;
+        
+    }
+
+    header img{
+        width: 180px;
+        height: auto;
+    }
+
+    .navigation{
+        max-width: 900px;
+    }
+
+    .navigation a{
+        font-size: 24px;
+        padding: 0 30px;
+    }
+    
+
     #csapatok article{
         flex: 1 1 calc(33% - 20px);
     }
+    #cikkek img{
+        float: right;
+        width: 45%;
+        min-width: 400px;
+        max-width: 500px;
+        gap: 20px;
+        margin: 0 0 10px 25px;
+    }
+
+    aside{
+        top: 150px;
+    }
+
+    /* .grid{
+        display: grid;
+        grid-template-columns: 1fr 700px;
+        gap: 20px;
+        grid-template-areas: "cim cim" "sz1 kep" "sz2 kep";
+    }
+
+    .grcim{ grid-area: cim;}
+    .gr1{ grid-area: sz1;}
+    .gr2{ grid-area: sz2;}
+    .grimg{
+        grid-area: kep;
+        width: 100%;
+        height: auto;
+    }*/
 }
