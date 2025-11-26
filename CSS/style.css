@@ -37,7 +37,7 @@ header{
     background-size: cover;
     background-position: right ;
     border-bottom: 4px solid red;
-    padding: 20px;
+    padding: 20px 0;
     height: auto;
     display: flex;
     flex-flow: column wrap;
@@ -94,14 +94,14 @@ header a:hover{
     padding: 15px 20px;
     background-color: rgba(255, 255, 255, 0.7);
     margin: 10px;
-    border: #444 solid 2px;
+    border: 2px solid #444;;
     border-radius: 15px;
 }
 
 .tartalom  article{
     background-color: rgba(111, 111, 111, 0.7); /* rgba(248, 189, 182, 0.9); */
     padding: 15px;
-    border: #666 solid 3px;
+    border: 2px solid #444;;
     border-radius: 15px;
     
 }
@@ -109,7 +109,7 @@ header a:hover{
 .tartalom h2 {
     line-height: 1.4;   
     margin-bottom: 17px;
-    border-bottom: 3px solid red ;
+    border-bottom: 2px solid red ;
     font-weight: bold;
 }
 
@@ -159,6 +159,8 @@ header a:hover{
     height: auto;
 }
 
+#creator{display: none;}
+
 /* .notyet{
     position: relative;
 }
@@ -172,13 +174,12 @@ header a:hover{
     top: 10px;
 }  */
 
-/* A Fő konténer (ez fogja össze a pilótákat) */
 #racers {
-    display: flex;             /* Rugalmas elrendezés bekapcsolása */
-    flex-flow: column wrap;           /* Engedi, hogy új sorba törjenek, ha nem férnek el */
+    display: flex;           
+    flex-flow: column wrap;       
     justify-content: center; 
     align-items: center;
-    gap: 20px;                 /* Távolság a kártyák között */
+    gap: 20px;  
     padding: 20px;
     margin: 10px;
 }
@@ -200,15 +201,15 @@ header a:hover{
 }
 
 #racers section img {
-    width: 100%;               /* Kitölti a kártya szélességét */
+    width: 100%;       
     height: auto;
     border-bottom: 2px solid #ccc;
     border-radius: 1px;
 }
 #racers section ul {
-    list-style: none;          /* Pöttyök eltüntetése */
+    list-style: none;  
     padding: 0;
-    text-align: left;          /* Az adatok balra igazítva szebbek */
+    text-align: left;        
 }
 
 #racers section h2 {
@@ -226,6 +227,111 @@ header a:hover{
     margin-bottom: 20px;
 }
 
+#update-panel {
+    background-color: rgba(111, 111, 111, 0.8);
+    color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 15px;
+    border: 2px solid red;
+    text-align: center;
+}
+
+#update-panel h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid red;
+    display: inline-block;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.input-group {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#update-panel select, #update-panel input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 80%;
+    font-size: 16px;
+}
+
+#update-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#update-btn:hover {
+    background-color: darkred;
+}
+
+/* --- KAPCSOLÓ (TOGGLE) STÍLUSA --- */
+.switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+
+/* A kapcsoló doboza */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: red;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
 
 
 @media (min-width: 45em){
@@ -252,7 +358,7 @@ header a:hover{
     }
 
     .navigation a {
-        min-width: 130px;
+        min-width: 140px;
         padding: 3px;
         font-size: 20px; 
     }
@@ -263,9 +369,21 @@ header a:hover{
         align-items: flex-start;
     }
 
-    aside {
+    #creator {
+        display: block;
         position:sticky;
         top: 150px;
+        text-align: center;
+    }
+
+    #creator img{
+        width: 250px;  
+        height: 250px;
+        object-fit: cover;  
+        border-radius: 50%;
+        border: 2px solid #444; 
+        margin-bottom: 15px;
+        background-color: #fff;
     }
 
     #csapatok{
@@ -332,8 +450,15 @@ header a:hover{
     }
 
 
-    aside{
+    #creator{
         top: 150px;
+    }
+
+    #futureform{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 20px;
+        flex: 1 1 calc(50% - 20px);
     }
 
     /* .grid{

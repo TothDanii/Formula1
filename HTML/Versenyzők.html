@@ -15,17 +15,38 @@
     <header>
         <img src="../kepek/logo.png" alt="">
         <nav class="navigation">
-            <a href="index.html">Főoldal</a>
-            <a id="aktív" href="Versenyzők.html">Versenyzők</a>
+            <a href="index.html">Hírek</a>
+            <a id="aktív" href="Versenyzők.html">Bajnokság</a>
             <a href="Csapatok.html">Csapatok</a>
-            <a href="Szabályváltozás.html">Szabályváltozások</a>
+            <a href="Szabályváltozás.html">Az F1 Jövője</a>
         </nav>
     </header>
     <main class="tartalom">
         <h1 id="cardtitle">2025-ös Világbajnokság állása</h1>
         <div id="racers"><!-- Kártyák betöltve DOM.js-ből --></div>
+        <section id="update-panel">
+            <h2>Segíts a weboldal aktualizálásában!</h2>
+            <div class="switch-container">
+                <span>Sprint</span>
+                <label class="switch">
+                    <input type="checkbox" id="raceTypeToggle" checked> <span class="slider"></span>
+                </label>
+                <span>Grand Prix</span>
+            </div>
+
+            <div class="input-group">
+                <label for="driverSelect">Válassz versenyzőt:</label>
+                <select id="driverSelect"></select>
+            </div>
+
+            <div class="input-group">
+                <label for="positionInput">Hányadik lett?</label>
+                <input type="number" id="positionInput" min="1" max="20" placeholder="Pl.: 1">
+            </div>
+
+            <button id="update-btn" onclick="updateDriverStats()">Frissítés</button>
+        </section>
     </main>
-        <!-- TODO: Aside készítése a kártyák aktualizálásával kapcsolatban! -->
 </body>
 </html>
 

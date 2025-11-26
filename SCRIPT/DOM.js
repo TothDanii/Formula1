@@ -210,55 +210,30 @@ const f1Data = [
             }
         ]
     },
-    {
-        name: "Cadillac F1 Team",
-        drivers: [
-            {
-                name: "Ismeretlen Pilóta 1",
-                image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png",
-                points: 0,
-                number: 0,
-                wins: 0,
-                podiums: 0
-            },
-            {
-                name: "Ismeretlen Pilóta 2",
-                image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png",
-                points: 0,
-                number: 0,
-                wins: 0,
-                podiums: 0
-            }
-        ]
-    }
 ];
 
 // HTML generáló függvény - KIZÁRÓLAG KÁRTYÁK
+const gpPoints = [25, 18, 15, 12, 10, 8, 6, 4, 2, 1]; // Top 10
+const sprintPoints = [8, 7, 6, 5, 4, 3, 2, 1];         // Top 8
+
+// --- 3. MEGJELENÍTŐ FÜGGVÉNY (Render) ---
 const renderDrivers = () => {
-    // FONTOS: Most már a belső 'div'-et keressük, nem a main-t!
     const mainContainer = document.getElementById('racers');
-    
     if (!mainContainer) return;
     
-    // Töröljük a korábbi kártyákat (de a H1-et nem, mert az a div-en kívül van)
     mainContainer.innerHTML = ''; 
 
-    // 1. Pilóták összegyűjtése
+    // Összegyűjtés és rendezés
     let allDrivers = [];
-    f1Data.forEach(team => {
-        allDrivers = allDrivers.concat(team.drivers);
-    });
-
-    // 2. Rendezés
+    f1Data.forEach(team => allDrivers = allDrivers.concat(team.drivers));
     allDrivers.sort((a, b) => b.points - a.points);
 
-    // 3. Kiíratás
+    // Kártyák generálása
     allDrivers.forEach(driver => {
         const driverSection = document.createElement('section');
-
         driverSection.innerHTML = `
             <h2>${driver.name}</h2>
-            <img src="${driver.image}" alt="${driver.name} fotó">
+            <img src="${driver.image}" alt="${driver.name}">
             <ul>
                 <li>
                     <p>Pontszám: ${driver.points}</p>
@@ -268,9 +243,82 @@ const renderDrivers = () => {
                 </li>
             </ul>
         `;
-
         mainContainer.appendChild(driverSection);
+    });
+
+    // Frissítjük a legördülő listát is, hogy a nevek betöltődjenek
+    populateSelect();
+};
+
+// --- 4. LEGÖRDÜLŐ LISTA FELTÖLTÉSE ---
+const populateSelect = () => {
+    const select = document.getElementById('driverSelect');
+    // Csak akkor töltjük fel, ha üres (hogy ne duplikálódjon minden frissítésnél)
+    if (select.options.length > 0) return; 
+
+    let allDrivers = [];
+    f1Data.forEach(team => allDrivers = allDrivers.concat(team.drivers));
+    
+    // ABC sorrendbe tesszük a listában a könnyebb kereshetőségért
+    allDrivers.sort((a, b) => a.name.localeCompare(b.name));
+
+    allDrivers.forEach(driver => {
+        const option = document.createElement('option');
+        option.value = driver.name;
+        option.text = driver.name;
+        select.appendChild(option);
     });
 };
 
+// --- 5. AZ ADATOK FRISSÍTÉSE (Gombnyomásra) ---
+const updateDriverStats = () => {
+    const driverName = document.getElementById('driverSelect').value;
+    const position = parseInt(document.getElementById('positionInput').value);
+    const isGrandPrix = document.getElementById('raceTypeToggle').checked; // True ha GP, False ha Sprint
+
+    if (!position || position < 1 || position > 20) {
+        alert("Kérlek adj meg egy érvényes helyezést (1-20)!");
+        return;
+    }
+
+    // Megkeressük a pilótát az adatbázisban
+    let foundDriver = null;
+    f1Data.forEach(team => {
+        const driver = team.drivers.find(d => d.name === driverName);
+        if (driver) foundDriver = driver;
+    });
+
+    if (foundDriver) {
+        // Pontszámítás
+        let pointsToAdd = 0;
+
+        if (isGrandPrix) {
+            // GRAND PRIX LOGIKA
+            if (position <= 10) {
+                pointsToAdd = gpPoints[position - 1];
+            }
+            // Statisztikák növelése csak GP-n
+            if (position === 1) foundDriver.wins += 1;
+            if (position <= 3) foundDriver.podiums += 1;
+            
+        } else {
+            // SPRINT LOGIKA
+            if (position <= 8) {
+                pointsToAdd = sprintPoints[position - 1];
+            }
+            // Sprinten nem növeljük a hivatalos győzelem/pódium számlálót (F1 szabály)
+        }
+
+        // Pontok hozzáadása
+        foundDriver.points += pointsToAdd;
+
+        // Visszajelzés
+        alert(`${foundDriver.name} eredménye frissítve! (+${pointsToAdd} pont)`);
+
+        // Oldal újrarajzolása (hogy látszódjon a változás és az új sorrend)
+        renderDrivers();
+    }
+};
+
+// Indítás
 document.addEventListener('DOMContentLoaded', renderDrivers);
