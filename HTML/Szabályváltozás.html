@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formula-1</title>
+    <script src="../SCRIPT/Validate.js"></script>
     <link rel="icon" href="../kepek/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +22,7 @@
             <a id="aktív" href="Szabályváltozás.html">Az F1 Jövője</a>
         </nav>
     </header>
-    <div class="futureform">
+    <div id="futureform">
         <main class="tartalom" id="next">
             <article>
                 <h2>Hivatalos: Ilyen lesz a Forma-1 2026-tól - "Fürge" autók és aktív aerodinamika</h2>
@@ -57,8 +58,56 @@
                 </section>
             </article>
         </main>
-        <aside>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, error. Voluptate alias assumenda aliquam iure, velit ipsam, distinctio, vero ducimus laborum aperiam amet debitis consectetur et quisquam nemo impedit eveniet?</p>
+        <aside >
+            <section id="velemeny-szekcio">
+                <h2>Mi a véleményed a 2026-os szabályokról?</h2>
+                
+                <form action="https://httpbin.org/post" method="POST" id="surveyForm" novalidate>
+                    
+                    <label for="nev">Név</label>
+                    <input type="text" id="nev" name="nev" placeholder="Pl.: Kis János">
+
+                    <label for="email">E-mail cím:</label>
+                    <input type="email" id="email" name="email" placeholder="valami@másvalami.com">
+
+                    <label for="kedvenc-ujitas">Melyik újítás tetszik a legjobban?</label>
+                    <select id="kedvenc-ujitas" name="kedvenc_ujitas">
+                        <option value="">-- Válassz egyet --</option>
+                        <option value="kisebb_auto">Kisebb, könnyebb autók</option>
+                        <option value="motor_50_50">50-50% motorerő eloszlás</option>
+                        <option value="aktiv_aero">Aktív aerodinamika (X-mód)</option>
+                        <option value="uzemanyag">Fenntartható üzemanyag</option>
+                        <option value="manual_override">Manual Override</option>
+                    </select>
+
+                    <label>Szerinted izgalmasabb lesz így a versenyzés?</label>
+                    <div class="radio-group">
+                        <label class="radio-inline">
+                            <input type="radio" name="izgalmas" value="igen" checked> Igen
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="izgalmas" value="nem"> Nem
+                        </label>
+                    </div>
+
+                    <label for="ertekeles">Hányast adnál az új szabálycsomagra? :</label>
+                    <div class="range-container">
+                        <input type="range" id="ertekeles" name="ertekeles" min="1" max="10" value="5" oninput="this.nextElementSibling.value = this.value">
+                        <output>5</output>
+                    </div>
+
+                    <label for="velemeny">Mit változtatnál még?</label>
+                    <textarea id="velemeny" name="velemeny" rows="4" placeholder="Ide írhatod a véleményed..."></textarea>
+
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="adatkezeles" name="adatkezeles">
+                        Elfogadom az adatkezelési szabályzatot.
+                    </label>
+
+                    <button type="submit" id="form-submit">Vélemény elküldése</button>
+
+                </form>
+            </section>
         </aside>
     </div>
 </body>

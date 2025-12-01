@@ -8,16 +8,16 @@ const f1Data = [
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LANNOR01_Lando_Norris/lannor01.png.transform/2col/image.png",
                 points: 390,
                 number: 4,
-                wins: 3,
-                podiums: 12
+                wins: 7,
+                podiums: 17
             },
             {
                 name: "Oscar Piastri",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/O/OSCPIA01_Oscar_Piastri/oscpia01.png.transform/2col/image.png",
                 points: 366,
                 number: 81,
-                wins: 2,
-                podiums: 9
+                wins: 7,
+                podiums: 14
             }
         ]
     },
@@ -27,18 +27,18 @@ const f1Data = [
             {
                 name: "Charles Leclerc",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png",
-                points: 305,
+                points: 226,
                 number: 16,
-                wins: 2,
-                podiums: 10
+                wins: 0,
+                podiums: 7
             },
             {
                 name: "Lewis Hamilton",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/2col/image.png",
-                points: 190,
+                points: 152,
                 number: 44,
-                wins: 1,
-                podiums: 4
+                wins: 0,
+                podiums: 0
             }
         ]
     },
@@ -48,15 +48,15 @@ const f1Data = [
             {
                 name: "Max Verstappen",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png",
-                points: 382,
+                points: 366,
                 number: 1,
-                wins: 7,
-                podiums: 14
+                wins: 6,
+                podiums: 13
             },
             {
-                name: "Liam Lawson", 
+                name: "Yuki Tsunoda", 
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LIALAW01_Liam_Lawson/lialaw01.png.transform/2col/image.png",
-                points: 2,
+                points: 28,
                 number: 30,
                 wins: 0,
                 podiums: 0
@@ -69,18 +69,18 @@ const f1Data = [
             {
                 name: "George Russell",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/G/GEORUS01_George_Russell/georus01.png.transform/2col/image.png",
-                points: 210,
+                points: 294,
                 number: 63,
-                wins: 1,
-                podiums: 5
+                wins: 2,
+                podiums: 9
             },
             {
                 name: "Andrea Kimi Antonelli",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/K/KIMANT01_Kimi_Antonelli/kimant01.png.transform/2col/image.png",
-                points: 85,
+                points: 137,
                 number: 12,
                 wins: 0,
-                podiums: 1
+                podiums: 3
             }
         ]
     },
@@ -90,7 +90,7 @@ const f1Data = [
             {
                 name: "Fernando Alonso",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/F/FERALO01_Fernando_Alonso/feralo01.png.transform/2col/image.png",
-                points: 62,
+                points: 40,
                 number: 14,
                 wins: 0,
                 podiums: 0
@@ -98,7 +98,7 @@ const f1Data = [
             {
                 name: "Lance Stroll",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LANSTR01_Lance_Stroll/lanstr01.png.transform/2col/image.png",
-                points: 24,
+                points: 32,
                 number: 18,
                 wins: 0,
                 podiums: 0
@@ -111,13 +111,13 @@ const f1Data = [
             {
                 name: "Pierre Gasly",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/P/PIEGAS01_Pierre_Gasly/piegas01.png.transform/2col/image.png",
-                points: 26,
+                points: 22,
                 number: 10,
                 wins: 0,
-                podiums: 1
+                podiums: 0
             },
             {
-                name: "Jack Doohan",
+                name: "Franco Colapinto",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/J/JACDOO01_Jack_Doohan/jacdoo01.png.transform/2col/image.png",
                 points: 0,
                 number: 7,
@@ -132,7 +132,7 @@ const f1Data = [
             {
                 name: "Alexander Albon",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/A/ALEALB01_Alexander_Albon/alealb01.png.transform/2col/image.png",
-                points: 12,
+                points: 73,
                 number: 23,
                 wins: 0,
                 podiums: 0
@@ -140,10 +140,10 @@ const f1Data = [
             {
                 name: "Carlos Sainz",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/C/CARSAI01_Carlos_Sainz/carsai01.png.transform/2col/image.png",
-                points: 184,
+                points: 48,
                 number: 55,
-                wins: 1,
-                podiums: 5
+                wins: 0,
+                podiums: 1
             }
         ]
     },
@@ -151,9 +151,9 @@ const f1Data = [
         name: "Visa Cash App RB",
         drivers: [
             {
-                name: "Yuki Tsunoda",
+                name: "Liam Lawson",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/Y/YUKTSU01_Yuki_Tsunoda/yuktsu01.png.transform/2col/image.png",
-                points: 22,
+                points: 36,
                 number: 22,
                 wins: 0,
                 podiums: 0
@@ -161,10 +161,10 @@ const f1Data = [
             {
                 name: "Isack Hadjar",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png", 
-                points: 0,
+                points: 51,
                 number: 6,
                 wins: 0,
-                podiums: 0
+                podiums: 1
             }
         ]
     },
@@ -174,15 +174,15 @@ const f1Data = [
             {
                 name: "Nico Hülkenberg",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/N/NICHUL01_Nico_Hulkenberg/nichul01.png.transform/2col/image.png",
-                points: 24,
+                points: 49,
                 number: 27,
                 wins: 0,
-                podiums: 0
+                podiums: 1
             },
             {
                 name: "Gabriel Bortoleto",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/G/GABBOR01_Gabriel_Bortoleto/gabbor01.png.transform/2col/image.png",
-                points: 0,
+                points: 19,
                 number: 5,
                 wins: 0,
                 podiums: 0
@@ -195,7 +195,7 @@ const f1Data = [
             {
                 name: "Esteban Ocon",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/E/ESTOCO01_Esteban_Ocon/estoco01.png.transform/2col/image.png",
-                points: 5,
+                points: 32,
                 number: 31,
                 wins: 0,
                 podiums: 0
@@ -203,7 +203,7 @@ const f1Data = [
             {
                 name: "Oliver Bearman",
                 image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/O/OLIBEA01_Oliver_Bearman/olibea01.png.transform/2col/image.png",
-                points: 7,
+                points: 41,
                 number: 87,
                 wins: 0,
                 podiums: 0
