@@ -55,7 +55,7 @@ const f1Data = [
             },
             {
                 name: "Yuki Tsunoda", 
-                image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LIALAW01_Liam_Lawson/lialaw01.png.transform/2col/image.png",
+                image: "../kepek/Profil/Yuki.png",
                 points: 28,
                 number: 30,
                 wins: 0,
@@ -76,7 +76,7 @@ const f1Data = [
             },
             {
                 name: "Andrea Kimi Antonelli",
-                image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/K/KIMANT01_Kimi_Antonelli/kimant01.png.transform/2col/image.png",
+                image: "../kepek/Profil/Ant.png",
                 points: 137,
                 number: 12,
                 wins: 0,
@@ -152,7 +152,7 @@ const f1Data = [
         drivers: [
             {
                 name: "Liam Lawson",
-                image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/Y/YUKTSU01_Yuki_Tsunoda/yuktsu01.png.transform/2col/image.png",
+                image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LIALAW01_Liam_Lawson/lialaw01.png.transform/2col/image.png", 
                 points: 36,
                 number: 22,
                 wins: 0,
@@ -160,7 +160,7 @@ const f1Data = [
             },
             {
                 name: "Isack Hadjar",
-                image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png", 
+                image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LIALAW01_Liam_Lawson/lialaw01.png.transform/2col/image.png", 
                 points: 51,
                 number: 6,
                 wins: 0,
