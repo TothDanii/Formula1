@@ -1,15 +1,14 @@
 Készítette: Tóth Dániel FS59SV
 URL:https://tothdanii.github.io/Formula1
-Téma: Forma1 Hírportál és fanoldal, jelenlegi f1 pilóták és csapatok bemutatása
-JS: 
+Téma: Forma1 Hírportál és fanoldal, jelenlegi pontverseny állása és csapatok bemutatása
+JS: DOM.js nevű fájlban található egy, a versenyzőket tartalmazó lista pár adattal, akiket pontszám szerint sorrendbe raktam a weboldalon. A versenyzők adatait(pontok alapján) szerkeszteni tudjuk egy versenyhétvége után. Ilyenkor a sorrend is frissül.
 Font: https://fonts.google.com/specimen/Inter
-AI: Gemini 3 Pro
-	Az AI-t főként szövegezésre, cikkek írására használtam, De a JS megírásában is nagyon sokat segített
+AI: Gemini 3 Pro -> Az AI-t főként szövegezésre, cikkek írására használtam. Illetve a kalkulátorban, és a validált űrlapnál is használtam.
 Képek:
 	Csapatok: 
                 https://seeklogo.com/free-vector-logos/ferrari
                 https://icons8.com/icons/set/mclaren--orange
-                https://seeklogo.com/vector-logo/406796/red-bull-racing-f1
+                https://racingnews365.com/formula-1-teams/red-bull
                 https://seeklogo.com/free-vector-logos/mercedes
                 https://hu.wikipedia.org/wiki/F%C3%A1jl:Logo_Williams_F1.png
                 https://fr.wikipedia.org/wiki/Fichier:Logo_Aston_Martin.svg
@@ -17,10 +16,13 @@ Képek:
                 https://commons.wikimedia.org/wiki/File:Logo_Haas_F1.png
                 https://brandlogos.net/tag/alpine
                 https://fansbrands.hu/collections/kick-sauber-hivatalos-termekek
+                https://logos-world.net/cadillac-logo/
         Versenyzők:
                 Gemini Által, a Wikimedia Commons oldaláról: https://commons.wikimedia.org/wiki/
                 https://www.mercedesamgf1.com/drivers/driver/andrea-kimi-antonelli
                 https://www.kymillman.com/photography/formula-1/driver-profiles/yuki-tsunoda/?srsltid=AfmBOoqjl1HpI8zAo5pleKz_yoQbP-vuUGxRnvddxnTmuLVlxytz65kt
+                https://racingnews365.com/formula-1-drivers/isack-hadjar
+                https://www.formulaonehistory.com/drivers/franco-colapinto/
         Cikkek:
                 https://www.reuters.com/sports/formula1/verstappen-takes-us-grand-prix-sprint-pole-austin-2025-10-17/
                 https://www.total-motorsport.com/f1-2025-mexico-city-grand-prix-race-results/
@@ -28,4 +30,5 @@ Képek:
                 https://www.racefans.net/2025/11/09/2025-brazilian-grand-prix-race-result-and-championship-points/
         Egyéb:
                 https://www.shutterstock.com/hu/image-illustration/black-white-background-grainy-dark-noise-2544891857?trackingId=11a4ee5e-fcc0-4751-872f-1fc9800559ee
-                https://www.google.com/search?sa=X&sca_esv=c302aaa6c87d965b&lns_surface=26&authuser=0&hl=hu&cs=0&sxsrf=AE3TifPfnZi9awvWaf4cPGadiYwAW4z1Wg:1764621057007&udm=24&source=lns.web.gsbubb&vsdim=683,1023&gsessionid=gSP4epuAKQD8-DuoAMPrSdUdu3yr2BbRki91Ye4e4AW1G6Vp3nYv1Q&lsessionid=3894DXqx7sjkKore_Fcfygw3fK0viEyLTid-Hc9S5uCBPtOTk3TDBw&vsint=CAQqCgoCCAcSAggSIAE6IwoWDQAAAD8VAAAAPx0AAIA_JQAAgD8wARCrBRj_ByUAAIA_&lns_mode=mu&vsrid=CL2QpezH9PijBRAGGAEiJDMwN0QwRURBLUI3QUQtNDQwQy05MDc5LUQ4RDk3MkJBRUM3NjIGIgJsdSgGOKT24YydnZED&q=f1+wallpaper&ved=2ahUKEwifoJDanZ2RAxVBLRAIHWAGBGYQs6gLegQIDxAB&biw=1920&bih=911&dpr=1#vhid=UjtgoPMWFOLUbM&vssid=mosaic
+                https://www.pexels.com/photo/rainy-formula-1-race-at-interlagos-circuit-29276547/
+                https://www.flaticon.com/free-icon/f1_2418779

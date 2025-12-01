@@ -118,7 +118,7 @@ const f1Data = [
             },
             {
                 name: "Franco Colapinto",
-                image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/J/JACDOO01_Jack_Doohan/jacdoo01.png.transform/2col/image.png",
+                image: "../kepek/Profil/Col.webp",
                 points: 0,
                 number: 7,
                 wins: 0,
@@ -160,7 +160,7 @@ const f1Data = [
             },
             {
                 name: "Isack Hadjar",
-                image: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LIALAW01_Liam_Lawson/lialaw01.png.transform/2col/image.png", 
+                image: "../kepek/Profil/Had.png", 
                 points: 51,
                 number: 6,
                 wins: 0,
