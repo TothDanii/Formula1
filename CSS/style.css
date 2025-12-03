@@ -480,7 +480,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 .tech-card {
-    flex: 1  330px;
+    flex: 1  350px;
     max-width: 450px;
     background-color: rgba(0, 0, 0, 0.6); /* Sötét, áttetsző háttér */
     border: 1px solid #444;
@@ -592,8 +592,7 @@ input[type="radio"], input[type="checkbox"] {
     }
 
     #velemeny-szekcio{
-        margin: 15px auto
-    }
+        margin: 15px auto;
 
 }
 
@@ -649,11 +648,6 @@ input[type="radio"], input[type="checkbox"] {
         align-items: flex-start;
     }
 
-    #velemeny-szekcio{
-        margin: 15px 15px 15px 5px;
-        flex: 1 ;
-        min-width: 300px;
-    }
 
     #futureform main{
         flex: 2;
@@ -677,6 +671,4 @@ input[type="radio"], input[type="checkbox"] {
         width: 100%;
         height: auto;
     }*/
-
 }
-
