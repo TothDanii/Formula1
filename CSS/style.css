@@ -163,11 +163,12 @@ header a:hover{
 }
 
 #csapatok img{
+    display: block;
     position: absolute;
     top: 15px;
     right: 15px;      
     width: 50px;       
-    height: auto;
+    padding: auto 0;
 }
 
 #creator{display: none;}
@@ -355,7 +356,7 @@ input:checked + .slider:before {
     background-color: rgba(51, 51, 51, 0.8); /* Sötét háttér */
     color: white;
     padding: 20px;
-    margin: 15px;
+    margin: 15px auto;
     border-radius: 15px;
     border: 2px solid red;
     max-width: 600px;
@@ -464,6 +465,64 @@ input[type="radio"], input[type="checkbox"] {
     background-color: rgb(200, 0, 0);
 }
 
+/* --- TECH SHOWCASE STÍLUS (Szabályváltozás) --- */
+
+#next h2 {
+    font-size: 18px;
+    color: black !important;
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* A Rács szerkezete */
+.tech-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px;
+}
+
+.tech-card {
+    flex: 1  350px;
+    max-width: 450px;
+    background-color: rgba(0, 0, 0, 0.6); /* Sötét, áttetsző háttér */
+    border: 1px solid #444;
+    border-radius: 12px;
+    overflow: hidden; /* Hogy a kép ne lógjon ki a kerekítésnél */
+    display: flex;
+    flex-direction: column;
+}
+
+/* A kártya képe */
+.tech-card img {
+    /* width: 100%; */
+    height: 180px;
+    margin: 5px auto;   
+    border-radius: 10px;
+    border-bottom: 3px solid red;
+}
+
+/* A kártya címe */
+.tech-card h3 {
+    color: white !important;
+    font-size: 20px;
+    margin: 10px 15px 5px 15px;
+    text-transform: uppercase;
+    border-left: none !important;
+    padding-left: 0 !important;
+    background: none !important;
+    border-top: #999 dashed 1px;
+    padding-top: 5px;
+}
+
+.tech-card p {
+    color: #ddd ;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 15px 15px 15px;
+}
+
 @media (min-width: 45em){
     body {font-size: 17px; background-position: center 75%;}
     h1 {font-size: 40px;}   
@@ -503,6 +562,7 @@ input[type="radio"], input[type="checkbox"] {
         position:sticky;
         top: 150px;
         text-align: center;
+        margin-right: 15px;
     }
 
     #creator img{
