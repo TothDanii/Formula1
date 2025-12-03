@@ -75,7 +75,7 @@ const f1Data = [
                 podiums: 9
             },
             {
-                name: "Andrea Kimi Antonelli",
+                name: "Kimi Antonelli",
                 image: "../kepek/Profil/Ant.png",
                 points: 137,
                 number: 12,
