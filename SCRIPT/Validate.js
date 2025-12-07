@@ -31,10 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- 2. EMAIL VALIDÁCIÓ (Opcionális, de ha írt, legyen jó) ---
         if (emailInput.value.trim() !== "") {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(emailInput.value)) {
+            if (!emailInput.value.includes('@')) { 
                 emailInput.classList.add('input-error');
-                hibaUzenetek.push("- Kérlek, valós e-mail címet adj meg.");
+                hibaUzenetek.push("- Kérlek, valós e-mail címet adj meg!");
                 isValid = false;
             }
         }
